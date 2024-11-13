@@ -1,0 +1,86 @@
+/* General layout */
+.game-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-height: 100vh; */
+  /* background-color: #f9f9f9; */
+  font-family: Arial, sans-serif;
+}
+
+/* Mode selection screen */
+.mode-selection {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.mode-button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.mode-button:hover {
+  background-color: #45a049;
+}
+
+/* Game board layout */
+.game-board {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.status {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Buttons */
+.reset-button,
+.back-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.reset-button {
+  background-color: #f44336;
+  color: #ffffff;
+  border: none;
+}
+
+.reset-button:hover {
+  background-color: #db403e;
+}
+
+.back-button {
+  background-color: #9e9e9e;
+  color: #ffffff;
+  border: none;
+}
+
+.back-button:hover {
+  background-color: #757575;
+}

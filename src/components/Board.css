@@ -1,0 +1,23 @@
+/* .board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 200px;
+  margin: 0 auto;
+} */
+
+/* .square {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  border: 2px solid #333;
+  transition: background-color 0.3s;
+} */
+
+.square.highlight {
+  background-color: #4caf50; /* Green color for winning squares */
+  color: #ffffff;
+}
