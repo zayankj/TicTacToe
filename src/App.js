@@ -119,6 +119,59 @@ function calculateWinner(squares) {
 }
 
 const calculateBotMove = (squares) => {
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+
+  // Check for a winning move
+  for (let line of lines) {
+    const [a, b, c] = line;
+    if (squares[a] === "O" && squares[b] === "O" && squares[c] === null) {
+      return c;
+    }
+    if (squares[a] === "O" && squares[c] === "O" && squares[b] === null) {
+      return b;
+    }
+    if (squares[b] === "O" && squares[c] === "O" && squares[a] === null) {
+      return a;
+    }
+  }
+
+  // Block opponent's winning move
+  for (let line of lines) {
+    const [a, b, c] = line;
+    if (squares[a] === "X" && squares[b] === "X" && squares[c] === null) {
+      return c;
+    }
+    if (squares[a] === "X" && squares[c] === "X" && squares[b] === null) {
+      return b;
+    }
+    if (squares[b] === "X" && squares[c] === "X" && squares[a] === null) {
+      return a;
+    }
+  }
+
+  // Take center if available
+  if (squares[4] === null) {
+    return 4;
+  }
+
+  // Take one of the corners if available
+  const corners = [0, 2, 6, 8];
+  for (let corner of corners) {
+    if (squares[corner] === null) {
+      return corner;
+    }
+  }
+
+  // Fallback to a random empty square
   const emptySquares = squares
     .map((value, index) => (value === null ? index : null))
     .filter((value) => value !== null);
